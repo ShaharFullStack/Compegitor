@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/positions.js"></script>
+    <title>Game</title>
+
+<body>
+    <!-- Existing game layout -->
+    <div class="game-page">
+        <div class="controls">
+            <button id="start-button">START</button>
+            <div id="score">Score: 0</div>
+            <div id="timer">Time: 240</div>
+            <button id="settings-button">Settings</button>
+        </div>
+            <div class="fretboard">
+                <!-- Empty top-left corner -->
+                <div></div>
+                <!-- Fret numbers -->
+                <div class="fret roman">I</div>
+                <div class="fret roman">II</div>
+                <div class="fret roman">III</div>
+                <div class="fret roman">IV</div>
+                <div class="fret roman">V</div>
+                <div class="fret roman">VI</div>
+                <div class="fret roman">VII</div>
+                <div class="fret roman">VIII</div>
+                <div class="fret roman">IX</div>
+                <div class="fret roman">X</div>
+                <div class="fret roman">XI</div>
+                <div class="fret roman">XII</div>
+                <div class="fret roman">XIII</div>
+                <div class="fret roman">XIV</div>
+                <div class="fret roman">XV</div>
+
+                <!-- 1st string (high E) -->
+                <div class="fret"><button data-note="E6" data-string="1" data-fret="0">E</button></div>
+                <div class="fret"><button data-note="F6" data-string="1" data-fret="1">F</button></div>
+                <div class="fret"><button data-note="F#6" data-string="1" data-fret="2">F#/Gb</button></div>
+                <div class="fret"><button data-note="G6" data-string="1" data-fret="3">G</button></div>
+                <div class="fret"><button data-note="G#6" data-string="1" data-fret="4">G#/Ab</button></div>
+                <div class="fret"><button data-note="A6" data-string="1" data-fret="5">A</button></div>
+                <div class="fret"><button data-note="A#6" data-string="1" data-fret="6">A#/Bb</button></div>
+                <div class="fret"><button data-note="B6" data-string="1" data-fret="7">B</button></div>
+                <div class="fret"><button data-note="C7" data-string="1" data-fret="8">C</button></div>
+                <div class="fret"><button data-note="C#7" data-string="1" data-fret="9">C#/Db</button></div>
+                <div class="fret"><button data-note="D7" data-string="1" data-fret="10">D</button></div>
+                <div class="fret"><button data-note="D#7" data-string="1" data-fret="11">D#/Eb</button></div>
+                <div class="fret"><button data-note="E7" data-string="1" data-fret="12">E</button></div>
+                <div class="fret"><button data-note="F7" data-string="1" data-fret="13">F</button></div>
+                <div class="fret"><button data-note="F#7" data-string="1" data-fret="14">F#/Gb</button></div>
+                <div class="fret"><button data-note="G7" data-string="1" data-fret="15">G</button></div>
+
+                <!-- 2nd string (B) -->
+                <div class="fret"><button data-note="B5" data-string="2" data-fret="0">B</button></div>
+                <div class="fret"><button data-note="C6" data-string="2" data-fret="1">C</button></div>
+                <div class="fret"><button data-note="C#6" data-string="2" data-fret="2">C#/Db</button></div>
+                <div class="fret"><button data-note="D6" data-string="2" data-fret="3">D</button></div>
+                <div class="fret"><button data-note="D#6" data-string="2" data-fret="4">D#/Eb</button></div>
+                <div class="fret"><button data-note="E6" data-string="2" data-fret="5">E</button></div>
+                <div class="fret"><button data-note="F6" data-string="2" data-fret="6">F</button></div>
+                <div class="fret"><button data-note="F#6" data-string="2" data-fret="7">F#/Gb</button></div>
+                <div class="fret"><button data-note="G6" data-string="2" data-fret="8">G</button></div>
+                <div class="fret"><button data-note="G#6" data-string="2" data-fret="9">G#/Ab</button></div>
+                <div class="fret"><button data-note="A6" data-string="2" data-fret="10">A</button></div>
+                <div class="fret"><button data-note="A#6" data-string="2" data-fret="11">A#/Bb</button></div>
+                <div class="fret"><button data-note="B6" data-string="2" data-fret="12">B</button></div>
+                <div class="fret"><button data-note="C7" data-string="2" data-fret="13">C</button></div>
+                <div class="fret"><button data-note="C#7" data-string="2" data-fret="14">C#/Db</button></div>
+                <div class="fret"><button data-note="D7" data-string="2" data-fret="15">D</button></div>
+
+                <!-- 3rd string (G) -->
+                <div class="fret"><button data-note="G5" data-string="3" data-fret="0">G</button></div>
+                <div class="fret"><button data-note="G#5" data-string="3" data-fret="1">G#/Ab</button></div>
+                <div class="fret"><button data-note="A5" data-string="3" data-fret="2">A</button></div>
+                <div class="fret"><button data-note="A#5" data-string="3" data-fret="3">A#/Bb</button></div>
+                <div class="fret"><button data-note="B5" data-string="3" data-fret="4">B</button></div>
+                <div class="fret"><button data-note="C6" data-string="3" data-fret="5">C</button></div>
+                <div class="fret"><button data-note="C#6" data-string="3" data-fret="6">C#/Db</button></div>
+                <div class="fret"><button data-note="D6" data-string="3" data-fret="7">D</button></div>
+                <div class="fret"><button data-note="D#6" data-string="3" data-fret="8">D#/Eb</button></div>
+                <div class="fret"><button data-note="E6" data-string="3" data-fret="9">E</button></div>
+                <div class="fret"><button data-note="F6" data-string="3" data-fret="10">F</button></div>
+                <div class="fret"><button data-note="F#6" data-string="3" data-fret="11">F#/Gb</button></div>
+                <div class="fret"><button data-note="G6" data-string="3" data-fret="12">G</button></div>
+                <div class="fret"><button data-note="G#6" data-string="3" data-fret="13">G#/Ab</button></div>
+                <div class="fret"><button data-note="A6" data-string="3" data-fret="14">A</button></div>
+                <div class="fret"><button data-note="A#6" data-string="3" data-fret="15">A#/Bb</button></div>
+
+                <!-- 4th string (D) -->
+                <div class="fret"><button data-note="D5" data-string="4" data-fret="0">D</button></div>
+                <div class="fret"><button data-note="D#5" data-string="4" data-fret="1">D#/Eb</button></div>
+                <div class="fret"><button data-note="E5" data-string="4" data-fret="2">E</button></div>
+                <div class="fret"><button data-note="F5" data-string="4" data-fret="3">F</button></div>
+                <div class="fret"><button data-note="F#5" data-string="4" data-fret="4">F#/Gb</button></div>
+                <div class="fret"><button data-note="G5" data-string="4" data-fret="5">G</button></div>
+                <div class="fret"><button data-note="G#5" data-string="4" data-fret="6">G#/Ab</button></div>
+                <div class="fret"><button data-note="A5" data-string="4" data-fret="7">A</button></div>
+                <div class="fret"><button data-note="A#5" data-string="4" data-fret="8">A#/Bb</button></div>
+                <div class="fret"><button data-note="B5" data-string="4" data-fret="9">B</button></div>
+                <div class="fret"><button data-note="C6" data-string="4" data-fret="10">C</button></div>
+                <div class="fret"><button data-note="C#6" data-string="4" data-fret="11">C#/Db</button></div>
+                <div class="fret"><button data-note="D6" data-string="4" data-fret="12">D</button></div>
+                <div class="fret"><button data-note="D#6" data-string="4" data-fret="13">D#/Eb</button></div>
+                <div class="fret"><button data-note="E6" data-string="4" data-fret="14">E</button></div>
+                <div class="fret"><button data-note="F6" data-string="4" data-fret="15">F</button></div>
+
+                <!-- 5th string (A) -->
+                <div class="fret"><button data-note="A4" data-string="5" data-fret="0">A</button></div>
+                <div class="fret"><button data-note="A#4" data-string="5" data-fret="1">A#/Bb</button></div>
+                <div class="fret"><button data-note="B4" data-string="5" data-fret="2">B</button></div>
+                <div class="fret"><button data-note="C5" data-string="5" data-fret="3">C</button></div>
+                <div class="fret"><button data-note="C#5" data-string="5" data-fret="4">C#/Db</button></div>
+                <div class="fret"><button data-note="D5" data-string="5" data-fret="5">D</button></div>
+                <div class="fret"><button data-note="D#5" data-string="5" data-fret="6">D#/Eb</button></div>
+                <div class="fret"><button data-note="E5" data-string="5" data-fret="7">E</button></div>
+                <div class="fret"><button data-note="F5" data-string="5" data-fret="8">F</button></div>
+                <div class="fret"><button data-note="F#5" data-string="5" data-fret="9">F#/Gb</button></div>
+                <div class="fret"><button data-note="G5" data-string="5" data-fret="10">G</button></div>
+                <div class="fret"><button data-note="G#5" data-string="5" data-fret="11">G#/Ab</button></div>
+                <div class="fret"><button data-note="A5" data-string="5" data-fret="12">A</button></div>
+                <div class="fret"><button data-note="A#5" data-string="5" data-fret="13">A#/Bb</button></div>
+                <div class="fret"><button data-note="B5" data-string="5" data-fret="14">B</button></div>
+                <div class="fret"><button data-note="C5" data-string="5" data-fret="15">C</button></div>
+
+                <!-- 6th string (low E) -->
+                <div class="fret"><button data-note="E4" data-string="6" data-fret="0">E</button></div>
+                <div class="fret"><button data-note="F4" data-string="6" data-fret="1">F</button></div>
+                <div class="fret"><button data-note="F#4" data-string="6" data-fret="2">F#/Gb</button></div>
+                <div class="fret"><button data-note="G4" data-string="6" data-fret="3">G</button></div>
+                <div class="fret"><button data-note="G#4" data-string="6" data-fret="4">G#/Ab</button></div>
+                <div class="fret"><button data-note="A4" data-string="6" data-fret="5">A</button></div>
+                <div class="fret"><button data-note="A#4" data-string="6" data-fret="6">A#/Bb</button></div>
+                <div class="fret"><button data-note="B4" data-string="6" data-fret="7">B</button></div>
+                <div class="fret"><button data-note="C5" data-string="6" data-fret="8">C</button></div>
+                <div class="fret"><button data-note="C#5" data-string="6" data-fret="9">C#/Db</button></div>
+                <div class="fret"><button data-note="D5" data-string="6" data-fret="10">D</button></div>
+                <div class="fret"><button data-note="D#5" data-string="6" data-fret="11">D#/Eb</button></div>
+                <div class="fret"><button data-note="E5" data-string="6" data-fret="12">E</button></div>
+                <div class="fret"><button data-note="F5" data-string="6" data-fret="13">F</button></div>
+                <div class="fret"><button data-note="F#5" data-string="6" data-fret="14">F#/Gb</button></div>
+                <div class="fret"><button data-note="G5" data-string="6" data-fret="15">G</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for sound settings -->
+    <div id="sound-settings-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Sound Settings</h2>
+            <div class="form-group">
+                <label for="waveform-select">Waveform:</label>
+                <select id="waveform-select">
+                    <option value="sine">Sine</option>
+                    <option value="square">Square</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="sawtooth">Sawtooth</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reverb-range">Reverb:</label>
+                <input type="range" id="reverb-range" min="0" max="100" value="50">
+            </div>
+            <div class="form-group">
+                <label for="decay-range">Decay:</label>
+                <input type="range" id="decay-range" min="0" max="100" value="50">
+            </div>
+            <div class="form-group">
+                <label for="delay-range">Delay:</label>
+                <input type="range" id="delay-range" min="0" max="100" value="50">
+            </div>
+            <button id="apply-settings">Apply Settings</button>
+        </div>
+    </div>
+</body>
+
+</html>
