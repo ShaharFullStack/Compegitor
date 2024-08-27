@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const positionIndex = correctNotes.findIndex(position => position.string === string && position.fret === fret);
         if (positionIndex !== -1) {
             score += 10;
-            timeLeft += 1;
             updateScore();
             button.classList.add('correct');
             correctNotes.splice(positionIndex, 1);
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             timeLeft -= 5;
             updateScore();
             button.classList.add('wrong');
-            setTimeout(() => button.classList.remove('wrong'), 500);
+            setTimeout(() => button.classList.remove('wrong'), 1000);
         }
     }
 
@@ -118,9 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
         currentScale = getRandomScalePosition();
     
-        const levelElement = document.getElementById('level');
+        const levelElement = document.getElementById("level");
         if (levelElement) {
-            levelElement.innerText = `Identify the positions for the ${currentScale} scale.`;
+            levelElement.innerHTML = `<h4>Identify the positions for the</h4><h4 style="color:black; font-weight: bold;"> ${currentScale} </h4><h4> scale.</h4>`;
         }
     
         notesToHighlight = scalePositions[currentScale] || modePositions[currentScale];

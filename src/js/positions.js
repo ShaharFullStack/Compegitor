@@ -223,7 +223,7 @@ export const modePositions = {
     ],
     'D Dorian': [
         { string: '6', fret: '10' }, { string: '6', fret: '12' }, { string: '6', fret: '13' },
-        { string: '5', fret: '10' }, { string: '5', fret: '12' }, { string: '5', fret: '14' },
+        { string: '5', fret: '10' }, { string: '5', fret: '12' }, 
         { string: '4', fret: '9' }, { string: '4', fret: '12' },
         { string: '3', fret: '9' }, { string: '3', fret: '10' }, { string: '3', fret: '12' },
         { string: '2', fret: '10' }, { string: '2', fret: '12' }, { string: '2', fret: '13' },
@@ -242,7 +242,7 @@ export const modePositions = {
         { string: '5', fret: '9' }, { string: '5', fret: '11' }, { string: '5', fret: '12' },
         { string: '4', fret: '9' }, { string: '4', fret: '11' }, { string: '4', fret: '12' },
         { string: '3', fret: '9' }, { string: '3', fret: '11' },
-        { string: '2', fret: '10' }, { string: '2', fret: '12' },
+        { string: '2', fret: '9' },{ string: '2', fret: '10' }, { string: '2', fret: '12' },
         { string: '1', fret: '9' }, { string: '1', fret: '11' }
     ],
     'D Mixolydian': [
@@ -300,7 +300,7 @@ export const modePositions = {
         { string: '5', fret: '4' }, { string: '5', fret: '6' }, { string: '5', fret: '7' },
         { string: '4', fret: '4' }, { string: '4', fret: '6' }, { string: '4', fret: '8' },
         { string: '3', fret: '4' }, { string: '3', fret: '6' }, { string: '3', fret: '7' },
-        { string: '2', fret: '5' }, { string: '2', fret: '7' },
+        { string: '2', fret: '4' },{ string: '2', fret: '5' }, { string: '2', fret: '7' },
         { string: '1', fret: '6' }, { string: '1', fret: '7' }
     ],
     'A Mixolydian': [
